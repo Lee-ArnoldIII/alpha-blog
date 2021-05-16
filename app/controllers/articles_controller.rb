@@ -22,7 +22,7 @@ class ArticlesController < ApplicationController
     @article.user = current_user
     if @article.save
       flash[:notice] = "Article was created successfully!"
-      redirect_to @article #long way = article_path(@article)
+      redirect_to @article 
     else
       render 'new'
     end  
